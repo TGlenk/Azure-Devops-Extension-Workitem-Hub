@@ -54,6 +54,10 @@
         {
             "path": "src",
             "addressable": true
+        },
+        {
+            "path": "dist",
+            "addressable": true
         }
     ]
 }
