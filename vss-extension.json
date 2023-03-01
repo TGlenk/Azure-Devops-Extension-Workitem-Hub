@@ -1,0 +1,63 @@
+{
+    "manifestVersion": 1,
+    "id": "this-is-a-test-123123",
+    "version": "1.0.6",
+    "name": "My first sample extension",
+    "description": "A sample Visual Studio Services extension.",
+    "publisher": "TobiasGlenk",
+    "categories": ["Azure Boards"],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+            }
+        ],
+        "contributions": [
+            {
+                "id": "Test Hub",
+                "type": "ms.vss-web.hub",
+                "targets": [
+                    "ms.vss-work-web.work-hub-group"
+                    ],
+                "properties": {
+                    "name": "Workitem Hub",
+                    "order": 99,
+                    "uri": "src/Create_New_Board_Hub/hello-world.html"
+                }
+            },
+            {
+                "id": "myAction",
+                "type": "ms.vss-web.action",
+                "description": "Run in Hello hub action",
+                "targets": [
+                    "ms.vss-work-web.work-item-query-menu"
+                ],
+                "properties": {
+                    "text": "Run in Hello hub",
+                    "title": "Run in Hello hub",
+                    "icon": "images/icon.png",
+                    "groupId": "actions",
+                    "uri": "src/Add_Action_Bar/action.html"
+                }
+            }
+        ],
+        "scopes": [
+			"vso.work"
+		],
+    "icons": {
+        "default": "images/extension_img.jfif"
+     },
+    "files": [
+        {
+            "path": "sdk/scripts", 
+            "addressable": true
+        },
+        {
+            "path": "images/extension_img.jfif", 
+            "addressable": true
+        },
+        {
+            "path": "src",
+            "addressable": true
+        }
+    ]
+}
