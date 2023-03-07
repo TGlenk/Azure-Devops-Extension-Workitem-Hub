@@ -1,0 +1,19 @@
+{
+    "contributions": [
+        {
+            "id": "hub",
+            "type": "ms.vss-web.hub",
+            "targets": [
+                "ms.vss-work-web.work-hub-group"
+            ],
+            "properties": {
+                "name": "Sample hub",
+                "order": 99,
+                "uri": "dist/Hub/Hub.html"
+            }
+        }
+    ],
+    "scopes": [
+        "vso.work"
+    ]
+}

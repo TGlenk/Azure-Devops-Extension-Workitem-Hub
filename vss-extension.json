@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "this-is-a-test-123123",
-    "version": "1.0.7",
+    "version": "1.0.27",
     "name": "My first sample extension",
     "description": "A sample Visual Studio Services extension.",
     "publisher": "TobiasGlenk",
@@ -11,38 +11,6 @@
             "id": "Microsoft.VisualStudio.Services"
             }
         ],
-        "contributions": [
-            {
-                "id": "Test Hub",
-                "type": "ms.vss-web.hub",
-                "targets": [
-                    "ms.vss-work-web.work-hub-group"
-                    ],
-                "properties": {
-                    "name": "Workitem Hub",
-                    "order": 99,
-                    "uri": "src/Create_New_Board_Hub/hello-world.html"
-                }
-            },
-            {  
-                "id": "sample-work-item-menu",  
-                "type": "ms.vss-web.action",  
-                "description": "Sample toolbar item which updates the title of a work item",  
-                "targets": [  
-                    "ms.vss-work-web.work-item-context-menu"  
-                ],  
-                "properties": {  
-                    "text": "Try me!",  
-                    "title": "Updates the title of the work item from the extension",  
-                    "toolbarText": "Try me!",  
-                    "icon": "images/hotdog.png",  
-                    "uri": "src/Add_Menu_Action/change_Workitem_Title.html"  
-                }  
-            }
-        ],
-        "scopes": [
-			"vso.work"
-		],
     "icons": {
         "default": "images/extension_img.jfif"
      },
@@ -52,12 +20,13 @@
             "addressable": true
         },
         {
-            "path": "src",
-            "addressable": true
-        },
-        {
             "path": "dist",
             "addressable": true
+        },
+        {  
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
         }
     ]
 }

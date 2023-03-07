@@ -1,0 +1,19 @@
+{
+    "contributions": [
+        {  
+            "id": "sample-work-item-menu",  
+            "type": "ms.vss-web.action",  
+            "description": "Sample toolbar item which updates the title of a work item",  
+            "targets": [  
+                "ms.vss-work-web.work-item-context-menu"  
+            ],  
+            "properties": {  
+                "text": "Try me!",  
+                "title": "Updates the title of the work item from the extension",  
+                "toolbarText": "Try me!",  
+                "icon": "images/hotdog.png",  
+                "uri": "dist/Add_Menu_Action/Add_Menu_Action.html"  
+            }  
+        }
+    ]
+}
